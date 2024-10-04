@@ -1,0 +1,143 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crypto Exchange</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    body {
+      color: #fff;
+      background-image: url('https://dubaimonsters.com/wp-content/uploads/2018/04/High-Resolution-Background-Images.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      margin: 0;
+      padding: 0;
+    }
+    .inputBox input {
+      color: #000;
+    }
+  </style>
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <h1 class="text-center">Crypto Exchange</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <p class="text-center">We are a specialized mining operation focused on acquiring cryptocurrencies from individuals and companies who are unable to sell due to various reasons. By purchasing these assets directly, we offer a streamlined solution that allows sellers to liquidate their holdings quickly and efficiently.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <p class="text-center">Our approach enables us to acquire cryptocurrencies at a lower cost than traditional exchanges, providing a win-win situation for both parties. Sellers benefit from a hassle-free transaction, while we expand our portfolio at advantageous prices.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <p class="text-center">At our core, we value transparency and trust, ensuring a secure and straightforward process for all our partners. Join us in navigating the evolving world of digital assets!</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="text-center">The Conditions:</h2>
+        <ul>
+          <li>You are allowed to exchange only once daily.</li>
+          <li>Lowest exchange Bitcoin to (ETH, LTC, XDG, DASH, PIRL, ADX, AION, USDT, ELF, LSK) is 0.025 Bitcoin.</li>
+          <li>Exchange Bitcoin to (ETH, LTC, XDG, DASH, PIRL, ADX, AION, USDT, ELF, LSK) is 0.40 Bitcoin.</li>
+          <li>The highest exchange value is 1 Bitcoin daily, why? To give everyone a chance to exchange.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="text-center">Conversion Options:</h2>
+        <div class="conversion-options">
+          <div class="option">
+            <h3><img src="https://cryptologos.cc/logos/bitcoin-btc-logo.png?v=023" width="20" height="20"> BTC to <img src="https://cryptologos.cc/logos/litecoin-ltc-logo.png?v=023" width="20" height="20"> LTC</h3>
+            <form>
+              <div class="form-group">
+                <label for="amount">Choose an amount:</label>
+                <select id="amount" name="amount">
+                  <option value="0.02500000">0.02500000 BTC = 42.1235 LTC (Fee 4%)</option>
+                  <option value="0.05000000">0.05000000 BTC = 68.6539 LTC (Fee 4%)</option>
+                  <option value="0.10000000">0.10000000 BTC = 112.2541 LTC (Fee 4%)</option>
+                  <option value="0.20000000">0.20000000 BTC = 220.2448 LTC (Fee 4%)</option>
+                  <option value="0.40000000">0.40000000 BTC = 410.2868 LTC (Fee 4%)</option>
+                </select>
+              </div>
+              <div class ="form-group inputBox">
+                <label for="ltcAddress">Enter your LTC wallet address:</label>
+                <input type="text" id="ltcAddress" name="ltcAddress">
+              </div>
+              <button type="submit" onclick="exchangeLTC()">Exchange</button>
+            </form>
+          </div>
+          <div class="option">
+            <h3><img src="https://cryptologos.cc/logos/bitcoin-btc-logo.png?v=023" width="20" height="20"> BTC to <img src="https://cryptologos.cc/logos/ethereum-eth-logo.png?v=023" width="20" height="20"> ETH</h3>
+            <form>
+              <div class="form-group">
+                <label for="amount">Choose an amount:</label>
+                <select id="amount" name="amount">
+                  <option value="0.02500000">0.02500000 BTC = 0.91 ETH (Fee 4%)</option>
+                  <option value="0.05000000">0.05000000 BTC = 1.82 ETH (Fee 4%)</option>
+                  <option value="0.10000000">0.10000000 BTC = 3.64 ETH (Fee 4%)</option>
+                  <option value="0.20000000">0.20000000 BTC = 7.28 ETH (Fee 4%)</option>
+                  <option value="0.40000000">0.40000000 BTC = 14.56 ETH (Fee 4%)</option>
+                </select>
+              </div>
+              <div class="form-group inputBox">
+                <label for="ethAddress">Enter your ETH wallet address:</label>
+                <input type="text" id="ethAddress" name="ethAddress">
+              </div>
+              <button type="submit" onclick="exchangeETH()">Exchange</button>
+            </form>
+          </div>
+          <div class="option">
+            <h3><img src="https://cryptologos.cc/logos/bitcoin-btc-logo.png?v=023" width="20" height="20"> BTC to <img src="https://cryptologos.cc/logos/lisk-lsk-logo.png?v=023" width="20" height="20"> LSK</h3>
+            <form>
+              <div class="form-group">
+                <label for="amount">Choose an amount:</label>
+                <select id="amount" name="amount">
+                  <option value="0.02500000">0.02500000 BTC = 10.23 LSK (Fee 4%)</option>
+                  <option value="0.05000000">0.05000000 BTC = 20.46 LSK (Fee 4%)</option>
+                  <option value="0.10000000">0.10000000 BTC = 40.92 LSK (Fee 4%)</option>
+                  <option value="0.20000000">0.20000000 BTC = 81.84 LSK (Fee 4%)</option>
+                  <option value="0.40000000">0.40000000 BTC = 163.68 LSK (Fee 4%)</option>
+                </select>
+              </div>
+              <div class="form-group inputBox">
+                <label for="lskAddress">Enter your LSK wallet address:</label>
+                <input type="text" id="lskAddress" name="lskAddress">
+              </div>
+              <button type="submit" onclick="exchangeLSK()">Exchange</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    function exchangeLTC() {
+      var amount = document.getElementById("amount").value;
+      alert("Send " + amount + " BTC to bc1qlf8n2430rdzttaxeymhhgfnxjpajz376skgcvj");
+    }
+    function exchangeETH() {
+      var amount = document.getElementById("amount").value;
+      alert("Send " + amount + " BTC to bc1qlf8n2430rdzttaxeymhhgfnxjpajz376skgcvj");
+    }
+    function exchangeLSK() {
+      var amount = document.getElementById("amount").value;
+      alert("Send " + amount + " BTC to bc1qlf8n2430rdzttaxeymhhgfnxjpajz376skgcvj");
+    }
+  </script>
+</body>
+</html>
